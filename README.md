@@ -4,37 +4,53 @@ This Django project template is to be used with the [related app template](https
 
 ## Usage
 
-To create a new Django project named 'My New Project' and its first Django app named 'Some Application', follow these steps:
+To create a new Django project named 'My Site' containing two Django apps named 'Blog' and 'Accounts', follow these steps:
 
 ```shell
-# Create and activate a virtualenv
+# Create and activate a virtualenv. Install django to the virtualenv
 virtualenv my_new_env
 source my_new_env/bin/activate
-
-# Install Django
 pip install django
 
+
 # Create your Django project
-django-admin.py startproject --template=https://github.com/atheiman/project_name/archive/master.zip my_new_project
+django-admin.py startproject --template=https://github.com/atheiman/project_name/archive/master.zip my_site
 
 # Navigate into your project
-cd my_new_project
+cd my_site
 
 # Clear out this README to make room for your README
 echo "# NEW PROJECT" > README.md
 
-# Create your Django app
-django-admin.py startapp --template=https://github.com/atheiman/app_name/archive/master.zip some_application
+# Create your Django apps
+django-admin.py startapp --template=https://github.com/atheiman/app_name/archive/master.zip blog
+django-admin.py startapp --template=https://github.com/atheiman/app_name/archive/master.zip accounts
 
-# Use sed as a template language... I know this is pretty bad, but it works.
-find . -type f -exec sed -i '' s/PROJECT\ NAME/My\ New\ Project/g {} +
-find . -type f -exec sed -i '' s/project_name/my_new_project/g {} +
-find . -type f -exec sed -i '' s/APP\ NAME/Some\ Application/g {} +
-find . -type f -exec sed -i '' s/app_name/some_application/g {} +
 
-# If sed returns the error "sed: RE error: illegal byte sequence" on a Mac, set the following environment variables
-#export LC_CTYPE=C 
-#export LANG=C
+# Use sed as a template engine... I know this is pretty bad, but it works.
+find . -type f -exec sed -i '' s/PROJECT\ NAME/My\ Site/g {} +
+find . -type f -exec sed -i '' s/project_name/my_site/g {} +
+
+find blog -type f -exec sed -i '' s/APP\ NAME/Blog/g {} +
+find blog -type f -exec sed -i '' s/app_name/blog/g {} +
+
+find accounts -type f -exec sed -i '' s/APP\ NAME/Accounts/g {} +
+find accounts -type f -exec sed -i '' s/app_name/accounts/g {} +
+
+# sed may return the error "sed: RE error: illegal byte sequence" on a Mac.
+# set the following environment variables to fix this issue:
+# export LC_CTYPE=C
+# export LANG=C
+
+
+# Add your apps to the INSTALLED_APPS tuple in settings/common.py
+INSTALLED_APPS = (
+    ...
+    'accounts',
+    'blog',
+)
+
+
 
 # Migrate a local SQLite database
 python manage.py migrate
