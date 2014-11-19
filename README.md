@@ -28,7 +28,7 @@ django-admin.py startapp --template=https://github.com/atheiman/app_name/archive
 
 # Use sed as a template language... I know this is pretty bad, but it works.
 find . -type f -exec sed -i '' s/PROJECT\ NAME/My\ New\ Project/g {} +
-find . -type f -exec sed -i '' s/new_project/my_new_project/g {} +
+find . -type f -exec sed -i '' s/project_name/my_new_project/g {} +
 find . -type f -exec sed -i '' s/APP\ NAME/Some\ Application/g {} +
 find . -type f -exec sed -i '' s/app_name/some_application/g {} +
 
