@@ -32,6 +32,10 @@ find . -type f -exec sed -i '' s/project_name/my_new_project/g {} +
 find . -type f -exec sed -i '' s/APP\ NAME/Some\ Application/g {} +
 find . -type f -exec sed -i '' s/app_name/some_application/g {} +
 
+# If sed returns the error "sed: RE error: illegal byte sequence" on a Mac, set the following environment variables
+#export LC_CTYPE=C 
+#export LANG=C
+
 # Migrate a local SQLite database
 python manage.py migrate
 
