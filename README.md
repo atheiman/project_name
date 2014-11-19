@@ -59,7 +59,3 @@ python manage.py runserver
 ```
 
 [Look at what you have created.](http://127.0.0.1:8000/some_application/)
-
-![Simple front end made with Bootstrap](http://i.imgur.com/4eOf1oH.png)
-
-![Responsive to small screens](http://i.imgur.com/Yx2wf2e.png)
