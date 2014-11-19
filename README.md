@@ -51,7 +51,6 @@ INSTALLED_APPS = (
 )
 
 
-
 # Migrate a local SQLite database
 python manage.py migrate
 
