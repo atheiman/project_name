@@ -1,21 +1,41 @@
-# NEW PROJECT
+# Django Project Template
+
+This Django project template is to be used with the [related app template](https://github.com/atheiman/app_name). By following the simple usage below you can kickstart your Django development.
 
 ## Usage
 
-To create a new Django project named 'My Project' and its first Django app named 'Some Application', follow these steps:
+To create a new Django project named 'My New Project' and its first Django app named 'Some Application', follow these steps:
 
 ```shell
-django-admin.py startproject --template=https://github.com/atheiman/project_name/archive/master.zip my_project
-cd my_project
+# Create and activate a virtualenv
+virtualenv my_new_env
+source my_new_env/bin/activate
+
+# Install Django
+pip install django
+
+# Create your Django project
+django-admin.py startproject --template=https://github.com/atheiman/project_name/archive/master.zip my_new_project
+
+# Navigate into your project
+cd my_new_project
+
+# Clear out this README to make room for your README
+echo "# NEW PROJECT" > README.md
+
+# Create your Django app
 django-admin.py startapp --template=https://github.com/atheiman/app_name/archive/master.zip some_application
 
-find . -type f -exec sed -i '' s/PROJECT\ NAME/My\ Project/g {} +
-find . -type f -exec sed -i '' s/project_name/my_project/g {} +
+# Use sed as a template language... I know this is pretty bad, but it works.
+find . -type f -exec sed -i '' s/PROJECT\ NAME/My\ New\ Project/g {} +
+find . -type f -exec sed -i '' s/new_project/my_new_project/g {} +
 find . -type f -exec sed -i '' s/APP\ NAME/Some\ Application/g {} +
 find . -type f -exec sed -i '' s/app_name/some_application/g {} +
 
+# Migrate a local SQLite database
 python manage.py migrate
 
+# Run the Django development server
 python manage.py runserver
 ```
 
