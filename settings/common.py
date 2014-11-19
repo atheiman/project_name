@@ -1,5 +1,5 @@
 """
-Django settings for personal_site project.
+Django settings for PROJECT NAME project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.7/topics/settings/
