@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load staticfiles %}
+    {% block head %}
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <link rel="icon" href="{% static 'pencil_icon.ico' %}">
+
+      <title>{% block title %}PROJECT NAME{% endblock title %}</title>
+
+      <!-- Bootstrap core CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+
+      <!-- PROJECT NAME stylesheet -->
+      <link href="{% static 'project_name/style.css' %}" rel="stylesheet">
+
+      <!-- Extra app level stylesheets -->
+      {% block app_stylesheets %}
+      {% enblock app_stylesheets %}
+
+      <!-- Extra styling per template -->
+      {% block style %}
+      {% endblock style %}
+
+    {% endblock head %}
+  </head>
+
+  <body>
+
+    {% include 'global/navbar.html' %}
+
+    <div class="container">
+
+      {% block content %}
+        <div class="jumbotron">
+          <p>No content provided to the base layout.</p>
+        </div>
+      {% endblock content %}
+
+      {% include 'global/footer.html' %}
+
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- Set active nav element based on url path -->
+    <script src="{% static 'global/nav.js' %}"></script>
+
+    <!-- PROJECT NAME JavaScript -->
+    <script src="{% static 'global/script.js' %}"></script>
+
+    <!-- Extra app level JavaScript -->
+    {% block app_scripts %}
+    {% endblock app_scripts %}
+
+    <!-- Extra JavaScript per template -->
+    {% block script %}
+    {% endblock script %}
+
+  </body>
+</html>

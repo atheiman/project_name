@@ -10,7 +10,7 @@
 
 
 
-# https://docs.djangoproject.com/en/1.7/ref/settings/#databases
+# https://docs.djangoproject.com/en/{{ docs_version }}/ref/settings/#databases
 
 QA_DB = {
     'default': {

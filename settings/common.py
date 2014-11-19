@@ -2,10 +2,10 @@
 Django settings for PROJECT NAME project.
 
 For more information on this file, see
-https://docs.djangoproject.com/en/1.7/topics/settings/
+https://docs.djangoproject.com/en/{{ docs_version }}/topics/settings/
 
 For the full list of settings and their values, see
-https://docs.djangoproject.com/en/1.7/ref/settings/
+https://docs.djangoproject.com/en/{{ docs_version }}/ref/settings/
 """
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -13,7 +13,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
-# See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
+# See https://docs.djangoproject.com/en/{{ docs_version }}/howto/deployment/checklist/
 
 # The below secret key will only be used in dev and qa (running the server locally)
 SECRET_KEY = 'this-is-a-nonrandom-secret-key'
@@ -46,7 +46,7 @@ WSGI_APPLICATION = 'conf.wsgi.application'
 
 
 # Internationalization
-# https://docs.djangoproject.com/en/1.7/topics/i18n/
+# https://docs.djangoproject.com/en/{{ docs_version }}/topics/i18n/
 
 # string representing the language code for this installation
 LANGUAGE_CODE = 'en-us'
@@ -65,7 +65,7 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.7/howto/static-files/
+# https://docs.djangoproject.com/en/{{ docs_version }}/howto/static-files/
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
