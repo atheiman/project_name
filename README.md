@@ -66,4 +66,4 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-[Look at what you have created.](http://127.0.0.1:8000/some_application/)
+Look at all you have created, you're off to a good start with a [blog](http://127.0.0.1:8000/blog/) and an [accounts](http://127.0.0.1:8000/accounts/) app!
