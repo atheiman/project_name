@@ -43,6 +43,14 @@ find accounts -type f -exec sed -i '' s/app_name/accounts/g {} +
 # export LANG=C
 
 
+# Add you app urls to the root url conf in conf/urls.py
+urlpatterns = patterns('',
+    url(r'^accounts/', include('accounts.urls', namespace='accounts')),
+    url(r'^blog/', include('blog.urls', namespace='blog')),
+    url(r'^admin/', include(admin.site.urls)),
+)
+
+
 # Add your apps to the INSTALLED_APPS tuple in settings/common.py
 INSTALLED_APPS = (
     ...
