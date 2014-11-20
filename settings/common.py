@@ -16,7 +16,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/{{ docs_version }}/howto/deployment/checklist/
 
 # The below secret key will only be used in dev and qa (running the server locally)
-SECRET_KEY = 'this-is-a-nonrandom-secret-key'
+SECRET_KEY = 'secret_key'
 
 # Application definition
 
@@ -27,7 +27,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app_name',
+    #'app_name',
 )
 
 MIDDLEWARE_CLASSES = (
