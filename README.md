@@ -43,7 +43,7 @@ find accounts -type f -exec sed -i '' s/app_name/accounts/g {} +
 # export LANG=C
 
 
-# Add you app urls to the ROOT_URLCONF located in conf/urls.py
+# Add your app urls to the ROOT_URLCONF located in conf/urls.py
 urlpatterns = patterns('',
     url(r'^accounts/', include('accounts.urls', namespace='accounts')),
     url(r'^blog/', include('blog.urls', namespace='blog')),
